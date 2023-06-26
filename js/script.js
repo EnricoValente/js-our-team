@@ -37,3 +37,12 @@ const team = [
 
     
 ]
+
+for (let i = 0; i < team.length; i++) {
+    const object = team[i];
+
+    for (const key in object) {
+       console.log(object[key]);
+    }
+    
+}
