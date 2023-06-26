@@ -1,11 +1,12 @@
 const team = [
     {
-        memberName: 'Warren Barnett',
+        memberName: 'Wayne Barnett',
         memberRole: 'Founder & CEO',
         memberPhoto: 'wayne-barnett-founder-ceo.jpg'
     },
-
+    
     {
+        
         memberName: 'Angela Carroll',
         memberRole: 'Chief Editor',
         memberPhoto: 'angela-caroll-chief-editor.jpg' 
@@ -38,11 +39,19 @@ const team = [
     
 ]
 
+console.log(team);
+
 for (let i = 0; i < team.length; i++) {
     const object = team[i];
 
     for (const key in object) {
        console.log(object[key]);
+       const box = document.querySelector('.container');
+       const newDiv = document.createElement('div');
+       newDiv.innerHTML=object[key];
+       box.append(newDiv);
+       
     }
     
 }
+
